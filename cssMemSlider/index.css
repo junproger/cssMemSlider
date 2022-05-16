@@ -184,3 +184,64 @@ label:active .slabel {
 		-moz-transition: background-color .5s, border .5s;
 			transition: background-color .5s, border .5s;
 }
+
+#input1:checked ~ .slider>.frames>.images {
+	transform: translateX(0);
+	-webkit-transition: transform 2s;
+		-moz-transition: transform 2s;
+			transition: transform 2s;
+}
+#input1:checked ~ .slider>.control>.inform>.content {
+	transform: translateY(0);
+	-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+			transition: transform 1s;
+}
+#input2:checked ~ .slider>.frames>.images {
+	transform: translateX(-20%);
+	-webkit-transition: transform 2s;
+		-moz-transition: transform 2s;
+			transition: transform 2s;
+}
+#input2:checked ~ .slider>.control>.inform>.content {
+	transform: translateY(-20%);
+	-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+			transition: transform 1s;
+}
+#input3:checked ~ .slider>.frames>.images {
+	transform: translateX(-40%);
+	-webkit-transition: transform 2s;
+		-moz-transition: transform 2s;
+			transition: transform 2s;
+}
+#input3:checked ~ .slider>.control>.inform>.content {
+	transform: translateY(-40%);
+	-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+			transition: transform 1s;
+}
+#input4:checked ~ .slider>.frames>.images {
+	transform: translateX(-60%);
+	-webkit-transition: transform 2s;
+		-moz-transition: transform 2s;
+			transition: transform 2s;
+}
+#input4:checked ~ .slider>.control>.inform>.content {
+	transform: translateY(-60%);
+	-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+			transition: transform 1s;
+}
+#input5:checked ~ .slider>.frames>.images {
+	transform: translateX(-80%);
+	-webkit-transition: transform 2s;
+		-moz-transition: transform 2s;
+			transition: transform 2s;
+}
+#input5:checked ~ .slider>.control>.inform>.content {
+	transform: translateY(-80%);
+	-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+			transition: transform 1s;
+}
