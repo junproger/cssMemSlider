@@ -63,3 +63,7 @@ p {
 	display: block;
 	overflow: hidden;
 }
+.container>input[type="radio"] {
+	display: none;
+	height: 0;
+}
