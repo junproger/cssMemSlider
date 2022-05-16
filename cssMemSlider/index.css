@@ -115,7 +115,23 @@ img {
 	overflow: hidden;
 	gap: 1rem;
 }
-
+.inform {
+	order: 1;
+	height: 2.5rem;
+	overflow: hidden;
+	line-height: 2.5rem;
+	font-family: 'Arial', 'Arial Regular', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2rem;
+}
+.content {
+	color: #fff;
+	transform: translateY(0);
+	-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+			transition: transform 1s;
+}
 .labels {
 	order: 2;
 	display: flex;
