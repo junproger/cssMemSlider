@@ -1,0 +1,310 @@
+:root {
+	--image-width: 82.6vw;
+}
+html,
+body {
+	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+*,
+nav,
+div {
+	-webkit-box-sizing: inherit;
+		-moz-box-sizing: inherit;
+			box-sizing: inherit;
+}
+html,
+body {
+	scroll-behavior: smooth;
+	background: #000;
+	display: block;
+	padding: 0 0;
+	border: none;
+	margin: 0 0;
+}
+nav,
+div,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+p {
+	display: block;
+	padding: 0 0;
+	border: none;
+	margin: 0 0;
+}
+.body {
+	width: 100%;
+	display: block;
+	padding: 0 0;
+	border: none;
+	margin: 0 0;
+}
+.wrapper {
+	width: 100%;
+	max-width: calc(100vw - 8vw);
+	border: 0.2vw solid #666;
+	border-radius: 1vw;
+	margin: 1.2% auto;
+	background: #111;
+	padding: 0.4vw;
+}
+.between {
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: #333;
+	padding: 2vw 4vw;
+}
+.container{
+	width: 100%;
+	height: 100%;
+	display: block;
+	overflow: hidden;
+}
+.container>input[type="radio"] {
+	display: none;
+	height: 0;
+}
+.slider {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content: flex-start;
+	overflow: hidden;
+	gap: 1rem;
+}
+.frames {
+	width: 100%;
+	height: calc(var(--image-width) / 2);
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+.images {
+	width: 505%;
+	height: calc(var(--image-width) / 2);
+	display: flex;
+	gap: 1.1vw;
+	transform: translateX(0);
+	-webkit-transition: transform 2s;
+		-moz-transition: transform 2s;
+			transition: transform 2s;
+}
+.images>p {
+	width: var(--image-width);
+	max-width: var(--image-width);
+	height: calc(var(--image-width) / 2);
+	border-radius: 0.5rem;
+}
+img {
+	width: var(--image-width);
+	max-width: var(--image-width);
+	height: calc(var(--image-width) / 2);
+	border-radius: 0.5rem;
+}
+.control {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+	gap: 1rem;
+}
+.inform {
+	order: 1;
+	height: 2.5rem;
+	overflow: hidden;
+	line-height: 2.5rem;
+	font-family: 'Arial', 'Arial Regular', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2rem;
+}
+.content {
+	color: #fff;
+	transform: translateY(0);
+	-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+			transition: transform 1s;
+}
+.labels {
+	order: 2;
+	display: flex;
+	height: 2.5rem;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.labels>label {
+	display: block;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.slabel {
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin: 0.5rem auto;
+	background-color:  #333;
+	border-radius: 50%;
+	border: 0.3rem solid #999;
+	cursor: pointer;
+	-webkit-transition: background-color .5s, border .5s;
+		-moz-transition: background-color .5s, border .5s;
+			transition: background-color .5s, border .5s;
+}
+
+#input1:checked ~ .slider>.control>.labels>label[for="input1"]>.slabel { background: yellow; }
+#input2:checked ~ .slider>.control>.labels>label[for="input2"]>.slabel { background: yellow; }
+#input3:checked ~ .slider>.control>.labels>label[for="input3"]>.slabel { background: yellow; }
+#input4:checked ~ .slider>.control>.labels>label[for="input4"]>.slabel { background: yellow; }
+#input5:checked ~ .slider>.control>.labels>label[for="input5"]>.slabel { background: yellow; }
+
+label:focus .slabel,
+label:hover .slabel {
+	cursor: pointer;
+	background: #bbb;
+	border: 0.2rem solid red;
+	-webkit-transition: background-color .5s, border .5s;
+		-moz-transition: background-color .5s, border .5s;
+			transition: background-color .5s, border .5s;
+}
+label:active .slabel {
+	cursor: pointer;
+	background: red;
+	border: 0.2rem solid yellow;
+	-webkit-transition: background-color .5s, border .5s;
+		-moz-transition: background-color .5s, border .5s;
+			transition: background-color .5s, border .5s;
+}
+
+#input1:checked ~ .slider>.frames>.images {
+	transform: translateX(0);
+	-webkit-transition: transform 2s;
+		-moz-transition: transform 2s;
+			transition: transform 2s;
+}
+#input1:checked ~ .slider>.control>.inform>.content {
+	transform: translateY(0);
+	-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+			transition: transform 1s;
+}
+#input2:checked ~ .slider>.frames>.images {
+	transform: translateX(-20%);
+	-webkit-transition: transform 2s;
+		-moz-transition: transform 2s;
+			transition: transform 2s;
+}
+#input2:checked ~ .slider>.control>.inform>.content {
+	transform: translateY(-20%);
+	-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+			transition: transform 1s;
+}
+#input3:checked ~ .slider>.frames>.images {
+	transform: translateX(-40%);
+	-webkit-transition: transform 2s;
+		-moz-transition: transform 2s;
+			transition: transform 2s;
+}
+#input3:checked ~ .slider>.control>.inform>.content {
+	transform: translateY(-40%);
+	-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+			transition: transform 1s;
+}
+#input4:checked ~ .slider>.frames>.images {
+	transform: translateX(-60%);
+	-webkit-transition: transform 2s;
+		-moz-transition: transform 2s;
+			transition: transform 2s;
+}
+#input4:checked ~ .slider>.control>.inform>.content {
+	transform: translateY(-60%);
+	-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+			transition: transform 1s;
+}
+#input5:checked ~ .slider>.frames>.images {
+	transform: translateX(-80%);
+	-webkit-transition: transform 2s;
+		-moz-transition: transform 2s;
+			transition: transform 2s;
+}
+#input5:checked ~ .slider>.control>.inform>.content {
+	transform: translateY(-80%);
+	-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+			transition: transform 1s;
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+	.control {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.inform {
+		order: 2;
+		align-self: flex-start;
+	}
+	.labels {
+		order: 1;
+		align-self: center;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 639px) {
+	.control {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.inform {
+		order: 2;
+		align-self: flex-start;
+		height: 2.2rem;
+		overflow: hidden;
+		line-height: 2.2rem;
+		font-weight: normal;
+		font-style: normal;
+		font-size: 1.5rem;
+	}
+	.labels {
+		order: 1;
+		align-self: center;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+	.control {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.inform {
+		order: 2;
+		align-self: flex-start;
+		height: 2rem;
+		overflow: hidden;
+		line-height: 2rem;
+		font-weight: normal;
+		font-style: normal;
+		font-size: 1.1rem;
+	}
+	.labels {
+		order: 1;
+		align-self: center;
+	}
+}
