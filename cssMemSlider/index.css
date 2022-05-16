@@ -1,0 +1,43 @@
+html,
+body {
+	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+*,
+nav,
+div {
+	-webkit-box-sizing: inherit;
+		-moz-box-sizing: inherit;
+			box-sizing: inherit;
+}
+html,
+body {
+	scroll-behavior: smooth;
+	background: #000;
+	display: block;
+	padding: 0 0;
+	border: none;
+	margin: 0 0;
+}
+nav,
+div,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+p {
+	display: block;
+	padding: 0 0;
+	border: none;
+	margin: 0 0;
+}
+.body {
+	width: 100%;
+	display: block;
+	padding: 0 0;
+	border: none;
+	margin: 0 0;
+}
