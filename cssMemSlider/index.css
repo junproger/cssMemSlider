@@ -144,3 +144,27 @@ img {
 		-moz-transition: background-color .5s, border .5s;
 			transition: background-color .5s, border .5s;
 }
+
+#input1:checked ~ .slider>.control>.labels>label[for="input1"]>.slabel { background: yellow; }
+#input2:checked ~ .slider>.control>.labels>label[for="input2"]>.slabel { background: yellow; }
+#input3:checked ~ .slider>.control>.labels>label[for="input3"]>.slabel { background: yellow; }
+#input4:checked ~ .slider>.control>.labels>label[for="input4"]>.slabel { background: yellow; }
+#input5:checked ~ .slider>.control>.labels>label[for="input5"]>.slabel { background: yellow; }
+
+label:focus .slabel,
+label:hover .slabel {
+	cursor: pointer;
+	background: #bbb;
+	border: 0.2rem solid red;
+	-webkit-transition: background-color .5s, border .5s;
+		-moz-transition: background-color .5s, border .5s;
+			transition: background-color .5s, border .5s;
+}
+label:active .slabel {
+	cursor: pointer;
+	background: red;
+	border: 0.2rem solid yellow;
+	-webkit-transition: background-color .5s, border .5s;
+		-moz-transition: background-color .5s, border .5s;
+			transition: background-color .5s, border .5s;
+}
