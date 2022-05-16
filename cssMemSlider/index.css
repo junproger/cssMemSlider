@@ -1,3 +1,6 @@
+:root {
+	--image-width: 82.6vw;
+}
 html,
 body {
 	-webkit-box-sizing: border-box;
@@ -66,4 +69,40 @@ p {
 .container>input[type="radio"] {
 	display: none;
 	height: 0;
+}
+.slider {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content: flex-start;
+	overflow: hidden;
+	gap: 1rem;
+}
+.frames {
+	width: 100%;
+	height: calc(var(--image-width) / 2);
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+.images {
+	width: 505%;
+	height: calc(var(--image-width) / 2);
+	display: flex;
+	gap: 1.1vw;
+	transform: translateX(0);
+	-webkit-transition: transform 2s;
+		-moz-transition: transform 2s;
+			transition: transform 2s;
+}
+.images>p {
+	width: var(--image-width);
+	max-width: var(--image-width);
+	height: calc(var(--image-width) / 2);
+	border-radius: 0.5rem;
+}
+img {
+	width: var(--image-width);
+	max-width: var(--image-width);
+	height: calc(var(--image-width) / 2);
+	border-radius: 0.5rem;
 }
